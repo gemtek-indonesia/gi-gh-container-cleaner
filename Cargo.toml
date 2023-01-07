@@ -2,6 +2,10 @@
 name = "gi-gh-container-cleaner"
 version = "0.1.0"
 edition = "2021"
+authors = ["Aditya Kresna <aditya.kresna@outlook.co.id>"]
+license = "MIT"
+repository = "https://github.com/gemtek-indonesia/gi-gh-container-cleaner"
+description = "Gemtek's Github dangling container cleaner"
 
 [dependencies]
 anyhow = "1.0.68"
