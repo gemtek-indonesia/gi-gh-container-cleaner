@@ -1,0 +1,133 @@
+{
+    "type": "array",
+    "items": {
+        "title": "Package Version",
+        "description": "A version of a software package",
+        "type": "object",
+        "properties": {
+            "id": {
+                "description": "Unique identifier of the package version.",
+                "type": "integer",
+                "examples": [
+                    1
+                ]
+            },
+            "name": {
+                "description": "The name of the package version.",
+                "type": "string",
+                "examples": [
+                    "latest"
+                ]
+            },
+            "url": {
+                "type": "string",
+                "examples": [
+                    "https://api.github.com/orgs/github/packages/container/super-linter/versions/786068"
+                ]
+            },
+            "package_html_url": {
+                "type": "string",
+                "examples": [
+                    "https://github.com/orgs/github/packages/container/package/super-linter"
+                ]
+            },
+            "html_url": {
+                "type": "string",
+                "examples": [
+                    "https://github.com/orgs/github/packages/container/super-linter/786068"
+                ]
+            },
+            "license": {
+                "type": "string",
+                "examples": [
+                    "MIT"
+                ]
+            },
+            "description": {
+                "type": "string"
+            },
+            "created_at": {
+                "type": "string",
+                "format": "date-time",
+                "examples": [
+                    "2011-04-10T20:09:31Z"
+                ]
+            },
+            "updated_at": {
+                "type": "string",
+                "format": "date-time",
+                "examples": [
+                    "2014-03-03T18:58:10Z"
+                ]
+            },
+            "deleted_at": {
+                "type": "string",
+                "format": "date-time",
+                "examples": [
+                    "2014-03-03T18:58:10Z"
+                ]
+            },
+            "metadata": {
+                "type": "object",
+                "title": "Package Version Metadata",
+                "properties": {
+                    "package_type": {
+                        "type": "string",
+                        "enum": [
+                            "npm",
+                            "maven",
+                            "rubygems",
+                            "docker",
+                            "nuget",
+                            "container"
+                        ],
+                        "examples": [
+                            "docker"
+                        ]
+                    },
+                    "container": {
+                        "type": "object",
+                        "title": "Container Metadata",
+                        "properties": {
+                            "tags": {
+                                "type": "array",
+                                "items": {
+                                    "type": "string"
+                                }
+                            }
+                        },
+                        "required": [
+                            "tags"
+                        ]
+                    },
+                    "docker": {
+                        "type": "object",
+                        "title": "Docker Metadata",
+                        "properties": {
+                            "tag": {
+                                "type": "array",
+                                "items": {
+                                    "type": "string"
+                                }
+                            }
+                        },
+                        "required": [
+                            "tags"
+                        ]
+                    }
+                },
+                "required": [
+                    "package_type"
+                ]
+            }
+        },
+        "required": [
+            "id",
+            "name",
+            "url",
+            "package_html_url",
+            "created_at",
+            "updated_at"
+        ]
+    }
+}
