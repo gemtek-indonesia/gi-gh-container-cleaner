@@ -1,0 +1,6 @@
+[project]
+name = "gtid-gi-gh-container-cleaner"
+slug = "gtid-gi-gh-container-cleaner"
+
+[amem]
+server = "https://amem.flusci.org"
